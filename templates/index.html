@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>标题</title>
+</head>
+<body>
+<form method="POST" action="/search">
+    <select name="area">
+        {% for item in the_select_region %}
+            <option value="{{ item }}">{{ item }}</option>
+        {% endfor %}
+    </select>
+<p><input value='Do it!' type='SUBMIT'></p>
+<a href="./story">数据故事</a>
+<a href="./new" style="margin-left: 10px;">交互图源代码</a>
+<a href="./dash" style="margin-left: 10px;">Dash Table</a>
+</form>
+{{ the_plot_all|safe }}
+{{ the_res|safe }}
+
+
+</body>
+</html>
